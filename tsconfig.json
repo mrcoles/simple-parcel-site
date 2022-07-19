@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "target": "es5",
+    "module": "es2020",
+    "downlevelIteration": true,
+    "lib": ["es2015", "es2017", "es2020", "dom"],
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "~*": ["./*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

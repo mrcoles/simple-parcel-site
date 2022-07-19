@@ -1,0 +1,21 @@
+version: "3"
+
+volumes:
+  local_client_cache: {}
+  local_client_dist: {}
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: ./compose/client/Dockerfile
+    image: simpleparcelsite_website_local_client
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - local_client_cache:/app/.parcel-cache
+      - local_client_dist:/app/dist
+    ports:
+      - "1234:1234"
+      - "1239:1239"
+    command: start
